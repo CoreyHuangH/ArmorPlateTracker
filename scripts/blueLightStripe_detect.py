@@ -52,8 +52,13 @@ def findContours(img, original_img):
     cv2.imshow("Contours", imgContours)
 
 
-def pnpSolution():
+def calculateArmorPosePNP():
     # TODO: 利用PNP解算解算出装甲板在相机坐标系下的空间位置和朝向角
+    pass
+
+
+def kalmanPredict():
+    # TODO: 建立匀速运动模型的卡尔曼滤波预测出装甲板在1s后的位置
     pass
 
 
