@@ -55,9 +55,9 @@ while True:
     if not success:
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
         continue
-    cv2.imshow("Original", img)
+    # cv2.imshow("Original", img)
     imgTresh = preProcessing(img)
     findContours(imgTresh, img)
-    cv2.imshow("imgThresh", imgTresh)
+    # cv2.imshow("imgThresh", imgTresh)
     if cv2.waitKey(1) == ord("q"):
         break
