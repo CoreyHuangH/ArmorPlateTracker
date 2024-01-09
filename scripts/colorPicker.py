@@ -14,11 +14,6 @@ cv2.createTrackbar("Sat Max", "Trackbars", 226, 255, lambda x: print(x))
 cv2.createTrackbar("Val Min", "Trackbars", 128, 255, lambda x: print(x))
 cv2.createTrackbar("Val Max", "Trackbars", 255, 255, lambda x: print(x))
 
-# img = cv2.imread("Resources/armor.jpg")
-
-# if img is None:
-#     print("Image not found")
-#     exit()
 
 while True:
     success, img = cap.read()
