@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("Resources/stream.mp4")
+cap = cv2.VideoCapture("/Users/huangyichuan/workspace/Project/stripeDetect/Resources/stream.mp4")
 cap.set(3, 640)
 cap.set(4, 480)
 
@@ -49,6 +49,10 @@ def findContours(img, original_img):
             )
     cv2.imshow("Contours", imgContours)
 
+def pnpSolution():
+    # TODO: 利用PNP解算解算出装甲板在相机坐标系下的空间位置和朝向角
+    pass
+    
 
 while True:
     success, img = cap.read()
