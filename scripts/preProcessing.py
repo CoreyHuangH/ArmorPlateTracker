@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def preProcessing(img: np.array) -> np.ndarray:
+def preProcessing(img: np.ndarray) -> np.ndarray:
     # 图片预处理
     imgBlur = cv2.GaussianBlur(img, (7, 7), 1)  # Gaussian blur
     imgHSV = cv2.cvtColor(imgBlur, cv2.COLOR_BGR2HSV)  # Convert to HSV color space
