@@ -51,7 +51,7 @@ def findContours(img, original_img):
                 (204, 0, 0),
                 2,
             )
-    cv2.imshow("Contours", imgContours)
+    return imgContours
 
 
 def calculateArmorPosePNP():
@@ -71,7 +71,8 @@ while True:
         continue
     # cv2.imshow("Original", img)
     imgTresh = preProcessing(img)
-    findContours(imgTresh, img)
+    imgContours = findContours(imgTresh, img)
+    cv2.imshow("Contours", imgContours)
     # cv2.imshow("imgThresh", imgTresh)
     if cv2.waitKey(1) == ord("q"):
         break
