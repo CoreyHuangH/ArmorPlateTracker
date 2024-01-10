@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 cap = cv2.VideoCapture(
-    "/Users/huangyichuan/workspace/Project/stripeDetect/Resources/stream.mp4"
+    "/Users/huangyichuan/workspace/Project/stripeDetect-py/Resources/stream.mp4"
 )
 cap.set(3, 640)
 cap.set(4, 480)
