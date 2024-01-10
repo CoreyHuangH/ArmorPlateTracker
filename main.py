@@ -16,9 +16,9 @@ def main():
             continue
         # cv2.imshow("Original", img)
         imgTresh = preProcessing(img)
+        # cv2.imshow("imgThresh", imgTresh)
         imgContours = findContours(imgTresh, img)
         cv2.imshow("Contours", imgContours)
-        # cv2.imshow("imgThresh", imgTresh)
         if cv2.waitKey(1) == ord("q"):
             break
 
