@@ -9,6 +9,7 @@ cap.set(4, 480)
 
 
 def preProcessing(img):
+    # 图片预处理
     imgBlur = cv2.GaussianBlur(img, (7, 7), 1)  # Gaussian blur
     imgHSV = cv2.cvtColor(imgBlur, cv2.COLOR_BGR2HSV)  # Convert to HSV color space
     h_min, h_max = 73, 118
@@ -27,6 +28,7 @@ def preProcessing(img):
 
 
 def findContours(img, original_img):
+    # 找到装甲板灯条轮廓
     contours, hierarchy = cv2.findContours(
         img, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE
     )
