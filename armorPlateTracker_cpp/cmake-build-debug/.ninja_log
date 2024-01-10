@@ -1,0 +1,6 @@
+# ninja log v5
+0	48	1704875262566807420	build.ninja	37265c34897ede2
+4	235	1704875243155205957	CMakeFiles/armorPlateTracker_cpp.dir/main.cpp.o	8a3069e96dca2fcd
+235	270	1704875243190740708	armorPlateTracker_cpp	dad0be125cb73e9e
+0	230	1704875265386328865	CMakeFiles/armorPlateTracker-cpp.dir/main.cpp.o	635e5391af0c9eac
+231	268	1704875265424205453	armorPlateTracker-cpp	f39805851267467f
