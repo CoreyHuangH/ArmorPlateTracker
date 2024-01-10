@@ -26,4 +26,6 @@ def findContours(img: np.ndarray, original_img: np.ndarray) -> np.ndarray:
                 (204, 0, 0),
                 2,
             )
+        # TODO: 从轮廓中找到装甲板
+
     return imgContours
