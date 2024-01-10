@@ -1,12 +1,9 @@
 import cv2
 import numpy as np
-
 from preProcessing import preProcessing
 from findContours import findContours
 
-cap = cv2.VideoCapture(
-    "/Users/huangyichuan/workspace/Project/stripeDetect-py/Resources/stream.mp4"
-)
+cap = cv2.VideoCapture("Resources/stream.mp4")
 cap.set(3, 640)
 cap.set(4, 480)
 
