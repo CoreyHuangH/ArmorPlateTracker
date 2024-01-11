@@ -19,4 +19,5 @@ def preProcessing(img: np.ndarray) -> np.ndarray:
     imgThresh = cv2.adaptiveThreshold(
         imgGray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
     )  # Adaptive thresholding
+    # cv2.imshow("imgThresh", imgThresh)
     return imgThresh
