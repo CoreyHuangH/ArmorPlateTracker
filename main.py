@@ -15,9 +15,9 @@ def main():
             cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
             continue
         # cv2.imshow("Original", img)
-        imgTresh = preProcessing(img)
+        imgTresh = preProcessing(img) # Process the image
         # cv2.imshow("imgThresh", imgTresh)
-        imgContours = findContours(imgTresh, img)
+        imgContours = findContours(imgTresh, img) # Find contours
         cv2.imshow("Contours", imgContours)
         if cv2.waitKey(1) == ord("q"):
             break
