@@ -5,14 +5,24 @@ cap = cv2.VideoCapture("Resources/stream.mp4")
 cap.set(3, 640)
 cap.set(4, 480)
 
+def nothing(x):
+    pass
+
 cv2.namedWindow("Trackbars")
 cv2.resizeWindow("Trackbars", 640, 240)
-cv2.createTrackbar("Hue Min", "Trackbars", 73, 179, lambda x: print(x))
-cv2.createTrackbar("Hue Max", "Trackbars", 118, 179, lambda x: print(x))
-cv2.createTrackbar("Sat Min", "Trackbars", 86, 255, lambda x: print(x))
-cv2.createTrackbar("Sat Max", "Trackbars", 226, 255, lambda x: print(x))
-cv2.createTrackbar("Val Min", "Trackbars", 128, 255, lambda x: print(x))
-cv2.createTrackbar("Val Max", "Trackbars", 255, 255, lambda x: print(x))
+cv2.createTrackbar("Hue Min", "Trackbars", 0, 179, nothing)
+cv2.createTrackbar("Hue Max", "Trackbars", 179, 179, nothing)
+cv2.createTrackbar("Sat Min", "Trackbars", 0, 255, nothing)
+cv2.createTrackbar("Sat Max", "Trackbars", 255, 255, nothing)
+cv2.createTrackbar("Val Min", "Trackbars", 0, 255, nothing)
+cv2.createTrackbar("Val Max", "Trackbars", 255, 255, nothing)
+
+cv2.setTrackbarPos("Hue Min", "Trackbars", 73)
+cv2.setTrackbarPos("Hue Max", "Trackbars", 118)
+cv2.setTrackbarPos("Sat Min", "Trackbars", 86)
+cv2.setTrackbarPos("Sat Max", "Trackbars", 226)
+cv2.setTrackbarPos("Val Min", "Trackbars", 128)
+cv2.setTrackbarPos("Val Max", "Trackbars", 255)
 
 
 while True:
