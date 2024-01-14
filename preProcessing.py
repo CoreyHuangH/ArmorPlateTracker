@@ -20,12 +20,12 @@ def preProcessing(img: np.ndarray) -> np.ndarray:
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
     imgGray = cv2.bitwise_and(imgGray, imgGray, mask=mask)  # Mask the grayscale image
 
-    kernel = np.ones((5, 5), dtype=np.uint8)
-    imgDilation = cv2.dilate(imgGray, kernel, iterations=2)  # Dilation
-    imgEroded = cv2.erode(imgDilation, kernel, iterations=1)  # Erosion
+    # kernel = np.ones((5, 5), dtype=np.uint8)
+    # imgDilation = cv2.dilate(imgGray, kernel, iterations=2)  # Dilation
+    # imgEroded = cv2.erode(imgDilation, kernel, iterations=1)  # Erosion
 
     imgThresh = cv2.adaptiveThreshold(
-        imgEroded, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
+        imgGray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 11, 2
     )  # Adaptive thresholding
 
     # cv2.imshow("imgThresh", imgThresh)
