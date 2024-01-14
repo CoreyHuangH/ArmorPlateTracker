@@ -5,8 +5,10 @@ cap = cv2.VideoCapture("Resources/stream.mp4")
 cap.set(3, 640)
 cap.set(4, 480)
 
+
 def nothing(x):
     pass
+
 
 cv2.namedWindow("Trackbars")
 cv2.resizeWindow("Trackbars", 640, 240)
