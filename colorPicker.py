@@ -50,5 +50,7 @@ while True:
     # cv2.imshow("HSV", imgHSV)
     cv2.imshow("Mask", mask)
 
-    if cv2.waitKey(1) & 0xFF == ord("q"):
+    k = cv2.waitKey(1)
+    if k == ord("q"):
+        cv2.destroyAllWindows()
         break
