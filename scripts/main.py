@@ -25,6 +25,7 @@ def main():
 
         k = cv2.waitKey(1)
         if k == ord("q"):
+            cv2.destroyAllWindows()
             break
 
 
