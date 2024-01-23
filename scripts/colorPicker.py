@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture("/Users/huangyichuan/workspace/Project/ArmorPlateTracker/Resources/stream.mp4")
+cap = cv2.VideoCapture("Resources/stream.mp4")
 cap.set(3, 640)
 cap.set(4, 480)
 
