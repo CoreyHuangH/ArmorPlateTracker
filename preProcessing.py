@@ -15,7 +15,9 @@ def preProcessing(img):
     upper = np.array([h_max, s_max, v_max])  # Upper HSV threshold
 
     mask = cv2.inRange(imgHSV, lower, upper)  # Create mask
-    _, mask = cv2.threshold(mask, 0, 255, cv2.THRESH_BINARY)  # Threshold mask
+    _, mask = cv2.threshold(
+        mask, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU
+    )  # Threshold mask
 
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
     imgGray = cv2.bitwise_and(imgGray, imgGray, mask=mask)  # Mask the grayscale image
